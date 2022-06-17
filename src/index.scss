@@ -1,0 +1,29 @@
+$black : #232323;
+body {
+  margin: 0;
+  font-family: 'Raleway',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+button{
+  font-family: 'Raleway';
+  background-color: transparent;
+  padding: 5px 10px;
+  font-weight: 400;
+  border: none;
+    &:hover{
+    cursor: pointer;
+    background-color: transparent;
+  }
+  &:active{
+    background-color: #ffffff4d;
+  }
+}
+
+::selection{
+  background-color: $black;
+  color: #fff;
+}
