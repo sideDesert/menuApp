@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/menuApp/static/css/main.d8d50ce7.css",
-    "main.js": "/menuApp/static/js/main.cc7cd4fd.js",
+    "main.css": "/menuApp/static/css/main.197ccd63.css",
+    "main.js": "/menuApp/static/js/main.c4d6d905.js",
+    "static/media/new-york.jpg": "/menuApp/static/media/new-york.7ad63efbae8a16546503.jpg",
+    "static/media/delhi.jpg": "/menuApp/static/media/delhi.900e737c1eec8d788d83.jpg",
+    "static/media/tokyo.jpg": "/menuApp/static/media/tokyo.8c828dbcc09d13e9e4ee.jpg",
+    "static/media/mumbai.jpg": "/menuApp/static/media/mumbai.6d5818ce7d13dfcf3bf8.jpg",
+    "static/media/hyderabad.jpg": "/menuApp/static/media/hyderabad.295e2b6c0a5bda05c1e9.jpg",
     "index.html": "/menuApp/index.html",
-    "main.d8d50ce7.css.map": "/menuApp/static/css/main.d8d50ce7.css.map",
-    "main.cc7cd4fd.js.map": "/menuApp/static/js/main.cc7cd4fd.js.map"
+    "main.197ccd63.css.map": "/menuApp/static/css/main.197ccd63.css.map",
+    "main.c4d6d905.js.map": "/menuApp/static/js/main.c4d6d905.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8d50ce7.css",
-    "static/js/main.cc7cd4fd.js"
+    "static/css/main.197ccd63.css",
+    "static/js/main.c4d6d905.js"
   ]
 }
