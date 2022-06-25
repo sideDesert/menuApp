@@ -3,7 +3,21 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import "./Hamburger.scss";
 
+import hyderabad from "../images/hyderabad.jpg";
+import delhi from "../images/delhi.jpg";
+import newyork from "../images/new-york.jpg";
+import tokyo from "../images/tokyo.jpg";
+import mumbai from "../images/mumbai.jpg";
+
 import gsap from "gsap";
+
+const cities = [
+  { name: "Delhi", image: delhi },
+  { name: "Hyderabad", image: hyderabad },
+  { name: "New York", image: newyork },
+  { name: "Tokyo", image: tokyo },
+  { name: "Mumbai", image: mumbai },
+];
 
 const Hamburger = ({ state }) => {
   //vars for animated dom nodes
@@ -90,6 +104,46 @@ const Hamburger = ({ state }) => {
     });
   };
 
+  const handleCity = (city) => {
+    gsap.to(cityBackground, {
+      duration: 0,
+      background: `url(${city}) center center/cover`,
+      opacity: 0,
+      backgroundRepeat: "no-repeat",
+    });
+    gsap.to(cityBackground, {
+      duration: 0.4,
+      opacity: 1,
+      skewY: 0,
+      ease: "power3.inOut",
+    });
+  };
+  const handleCityReturn = (city) => {
+    gsap.to(cityBackground, {
+      duration: 0.4,
+      opacity: 0,
+      ease: "power3.inOut",
+      skewY: 1,
+    });
+  };
+
+  const handleHoverEnter = (e) => {
+    gsap.to(e.target, {
+      duration: 0.3,
+      y: 3,
+      skewX: 4,
+      ease: "power3.inOut",
+    });
+  };
+  const handleHoverExit = (e) => {
+    gsap.to(e.target, {
+      duration: 0.3,
+      y: -3,
+      skewX: 0,
+      ease: "power3.inOut",
+    });
+  };
+
   return (
     <div className="hamburger-menu" ref={(el) => (menu = el)}>
       <div
@@ -97,24 +151,56 @@ const Hamburger = ({ state }) => {
         ref={(el) => (revealMenuBackground = el)}
       ></div>
       <div className="menu-layer" ref={(el) => (revealMenu = el)}>
-        <div className="menu-city-background"></div>
+        <div
+          className="menu-city-background"
+          ref={(el) => {
+            cityBackground = el;
+          }}
+        ></div>
         <div className="container">
           <div className="wrapper">
             <div className="menu-links">
               <nav>
                 <ul>
                   <li>
-                    <Link ref={(el) => (line1 = el)} to="/oppurtunities">
+                    <Link
+                      ref={(el) => (line1 = el)}
+                      to="/oppurtunities"
+                      onMouseEnter={(e) => {
+                        handleHoverEnter(e);
+                      }}
+                      onMouseOut={(e) => {
+                        handleHoverExit(e);
+                      }}
+                    >
                       Opportunities
                     </Link>
                   </li>
                   <li>
-                    <Link ref={(el) => (line2 = el)} to="/solutions">
+                    <Link
+                      ref={(el) => (line2 = el)}
+                      to="/solutions"
+                      onMouseEnter={(e) => {
+                        handleHoverEnter(e);
+                      }}
+                      onMouseOut={(e) => {
+                        handleHoverExit(e);
+                      }}
+                    >
                       Solutions
                     </Link>
                   </li>
                   <li>
-                    <Link ref={(el) => (line3 = el)} to="/contact-us">
+                    <Link
+                      ref={(el) => (line3 = el)}
+                      to="/contact-us"
+                      onMouseEnter={(e) => {
+                        handleHoverEnter(e);
+                      }}
+                      onMouseOut={(e) => {
+                        handleHoverExit(e);
+                      }}
+                    >
                       Contact Us
                     </Link>
                   </li>
@@ -133,11 +219,21 @@ const Hamburger = ({ state }) => {
               </div>
               <div className="locations">
                 Locations:
-                <span>Mumbai</span>
-                <span>Tokyo</span>
-                <span>Delhi</span>
-                <span>New York</span>
-                <span>Hyderabad</span>
+                {cities.map((city, i) => {
+                  return (
+                    <span
+                      key={city}
+                      onMouseEnter={() => {
+                        handleCity(city.image);
+                      }}
+                      onMouseOut={() => {
+                        handleCityReturn(city.image);
+                      }}
+                    >
+                      {city.name}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>
