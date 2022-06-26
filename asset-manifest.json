@@ -1,16 +1,11 @@
 {
   "files": {
     "main.css": "/menuApp/static/css/main.8b4aa0ec.css",
-    "main.js": "/menuApp/static/js/main.83949382.js",
+    "main.js": "/menuApp/static/js/main.7765245a.js",
     "static/media/new-york.webp": "/menuApp/static/media/new-york.39d745cf33b210a8bbca.webp",
-    "static/media/delhi.jpg": "/menuApp/static/media/delhi.7a9491a782d9ca72cd08.jpg",
-    "static/media/mumbai.jpg": "/menuApp/static/media/mumbai.53426ac8f1a245cd9fe0.jpg",
-    "static/media/tokyo.jpg": "/menuApp/static/media/tokyo.23c30f48ed2ac3f43ca9.jpg",
     "static/media/mumbai.webp": "/menuApp/static/media/mumbai.f8f4549891eaef6b61c9.webp",
     "static/media/delhi.webp": "/menuApp/static/media/delhi.02db1d8fde24b73232d9.webp",
     "static/media/tokyo.webp": "/menuApp/static/media/tokyo.b226a869c7c83b5e1652.webp",
-    "static/media/hyderabad.jpg": "/menuApp/static/media/hyderabad.8d4c02c667d542fb46b8.jpg",
-    "static/media/new-york.jpg": "/menuApp/static/media/new-york.d5bc887ae64661fa9d16.jpg",
     "static/media/hyderabad.webp": "/menuApp/static/media/hyderabad.c4d3e1fb88a03fb679cd.webp",
     "static/media/mumbai.avif": "/menuApp/static/media/mumbai.d8a4b50563399f38235a.avif",
     "static/media/tokyo.avif": "/menuApp/static/media/tokyo.8535ee9c0e8f17cafef6.avif",
@@ -19,10 +14,10 @@
     "static/media/new-york.avif": "/menuApp/static/media/new-york.e3ab29c93d918164d824.avif",
     "index.html": "/menuApp/index.html",
     "main.8b4aa0ec.css.map": "/menuApp/static/css/main.8b4aa0ec.css.map",
-    "main.83949382.js.map": "/menuApp/static/js/main.83949382.js.map"
+    "main.7765245a.js.map": "/menuApp/static/js/main.7765245a.js.map"
   },
   "entrypoints": [
     "static/css/main.8b4aa0ec.css",
-    "static/js/main.83949382.js"
+    "static/js/main.7765245a.js"
   ]
 }
